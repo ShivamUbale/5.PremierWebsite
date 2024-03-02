@@ -1,0 +1,1719 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Acumin Pro';
+ }
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'monument'; 
+    src: url('./public/fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf') format('woff2'), 
+
+}
+
+@font-face {
+    font-family: 'Acumin Pro'; 
+    src: url('./public/fonts/acumin-pro-cufonfonts/Acumin-RPro.otf') format('woff2'), 
+
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    /* background-color: crimson; */
+    padding-top: 0.1px;
+}
+
+#nav{
+    height: 13vh;
+    width: 100%;
+    /* background-color: #5d5858; */
+    margin-top: 35px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav h1{
+    font-family: 'monument';
+    letter-spacing: -5px;
+    font-size: 3vw;
+    font-weight: 900;
+    height: 100%;
+    width: 26%;
+    /* background-color: #fb00d1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#nav h1::after{
+    content: '©️';
+    font-family: 'Acumin pro';
+    font-size: 1.2vw;
+    font-weight: 100;
+    position: absolute;
+    right: 5vw;
+    top: 1.5vw;
+}
+
+#nav h1::before{
+    content: 'model management';
+    font-family: 'Acumin pro';
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 0px;
+    position: absolute;
+    bottom: 1vw;
+    left: 11.5vw;
+    color: #555;
+}
+
+#nav a{
+    font-size: 1.5vw;
+    height: 100%;
+    width: 16%;
+    /* background-color: #002afb; */
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid #000;
+    transition: .3s ease-in-out;
+}
+
+#nav a:nth-child(odd):hover{
+    font-size: 1.9vw;
+}
+#nav a:nth-child(even):hover{
+    font-size: 1.9vw;
+}
+
+
+#nav a:nth-last-child(3){
+    width: 24%;  
+}
+
+#nav a:nth-last-child(2){
+    border-right: none; 
+}
+
+#nav a:nth-last-child(1){
+    display: none;
+}
+
+#nav a i{
+    font-size: 1.8vw;
+    font-weight: 100;
+    position: absolute;
+    right: 11%;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------Center Page ------------------------------------------------------- */
+#center{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    padding: 3vw 6vw;
+}
+
+#content{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+#content video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay{
+    height: 53%;
+    width: 100%;
+    /* background-color: rgba(98, 0, 255, 0.367); */
+    position: absolute;
+    bottom: 0;
+    padding: 3vw ;
+    color: #fff;
+
+}
+
+#over1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#over1 h1{
+    font-family: monument;
+    font-size: 4vw;
+    margin-bottom: 2vw;
+}
+
+#over1 h2{
+    font-size: 1vw;
+    padding: 2vw;
+    /* background-color: violet; */
+    border-radius: 50%;
+    border: 1px solid #fff;
+    border-right: 6px solid #fff ;
+}
+
+
+#over2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    padding: 1vw 0;
+}
+
+#over2 h4{
+    font-size: 1.3vw;
+}
+
+#over2 img{
+    height: 3.5vw;
+}
+
+/*---------------------------------------------------------------Scroll Page---------------------------------------------------------------------------- */
+
+#scroll{
+    height: 50vh;
+    width: 100%;
+    /* background-color: cyan; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#container{
+    height: 100%;
+    width: 130%;
+    /* background-color:mediumpurple; */
+    display: inline-block;
+    padding: 1vw;
+    animation-name: anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#container img{
+    height: 80%;
+    border-radius: 50%;
+    width: 14%;
+    margin: 1.5vw;
+    object-fit: cover;
+    object-position: top;
+    /* display: none; */
+}
+
+@keyframes anime{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/* -------------------------------------------------------------Alphabet page -------------------------------------------------------------------------- */
+#alphabet{
+    height: 5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 0px 80px;
+}
+
+#alphabet h5{
+    height: 40px;
+    width: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: all ease 0.2s; */
+}
+
+#alphabet h5:hover{
+    text-decoration: underline;
+    font-size: 23px;
+}
+
+#alphabet h6{
+    height: 40px;
+    width: 40px;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#alphabet h6:hover{
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+
+/* -------------------------------------------------------------Page 2 ---------------------------------------------------------------------------------- */
+
+
+#page2{
+    height: 120%;
+    width: 100%;
+    /* background-color: #dadada; */
+    padding: 4vw 6vw;
+    padding-bottom: 0;
+    display: flex ;
+    justify-content: center;
+    gap: 5%;
+}
+
+#pg2-left{
+    height: 100%;
+    width: 55%;
+    /* background-color: red; */
+}
+
+#pg2-left img{
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page2 h1{
+    font-family: monument;
+    font-size: 6vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 25px;
+    line-height: 5vh;
+}
+
+#pg2-right{
+    height: 100%;
+    width: 40%;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 67% 33%;
+}
+
+
+#pg2-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 30%;
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+
+#pg2-right h3{
+    width: 90%;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 30px 0px;
+    font-size: 3.5vh;
+    line-height: 4vh;
+    font-weight: 600;
+}
+
+#pg2-right p{
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 30px 0px;
+    font-size: 2.5vh;
+    line-height: 2.5vh;
+    font-weight: 500;
+    color: #333;
+}
+
+
+
+
+
+
+/* ---------------------------------------------------------page 3--------------------------------------------------------------------- */
+
+#page3{
+    height: 100%;
+    width: 100%;
+    /* background-color: #c1c1c1; */
+    padding: 4vw 6vw;
+    padding-bottom: 2vw;
+    display: flex;
+    gap: 5%;
+}
+
+#pg3-left{
+    height: 100%;
+    width: 35%;
+    /* background-color: aqua; */
+}
+
+#pg3-left #circle-arrow{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#circle-arrow .i-arrow{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#circle-arrow .circle{
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+    /* border-radius: 50%; */
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#pg3-left h3{
+    font-size: 3.5vh;
+    line-height: 4vh;
+    font-weight: 600;
+}
+
+#pg3-right{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(43, 0, 255);
+}
+
+
+#pg3-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0% 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------page 4 --------------------------------------------------------------------------------- */
+
+#page4{
+    /* background: green; */
+    height: 100%;
+    width: 100%;
+    padding: 4vw 6vw;
+}
+
+#one-img{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+#one-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+/* ------------------------------------------------------------page 5 --------------------------------------------------------------------------- */
+
+#page5{
+    /* background: salmon; */
+    height: 100%;
+    width: 100%;
+    padding: 4vw 6vw;
+
+}
+
+#page5>h1{
+    text-align: center;
+    font-family: 'monument';
+    text-transform: uppercase;
+    font-size: 6vh;
+    font-weight: 700;
+    margin-bottom: 10vh;
+}
+
+
+#page5 .elem{
+    height: 17vh;
+    width: 100%;
+    border-top: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vh 5vh;
+}
+
+#page5 .elem:nth-last-child(1) {
+    border-bottom: 2px solid #000;
+}
+
+.elem h4{
+    font-size: 2vh;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 10vh;
+    height: 10vh;
+
+}
+
+.elem .elem-part2{
+    width: 50%;
+}
+
+.elem-part2 h1{
+    font-size: 6vh;
+    font-weight: 500;
+}
+
+.elem-part2 h5{
+    font-size: 2vh;
+    font-weight: 600;
+    line-height: 2.4vh;
+    text-transform: uppercase;
+    font-family: 'Acumin Pro Wide';
+}
+
+
+.elem .elem-part1{
+    height: 100%;
+    width: 25%;
+    position: relative;
+}
+
+.elem-part1 h1{
+    font-size: 6vh;
+    font-weight: 500;
+    margin-top: 3.5vh;
+}
+
+
+.elem-part1 h5{
+    font-size: 2vh;
+    font-weight: 600;
+    line-height: 2.4vh;
+    text-transform: uppercase;
+    font-family: 'Acumin Pro Wide';
+}
+
+.elem-part1 img{
+    height: 90%;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.elem:hover img{
+    opacity: 1;
+    left: 0%;
+}
+
+/* -------------------------------------------------------------Page 6 ------------------------------------------------------------------------ */
+
+
+#page6{
+    /* background: teal; */
+    height: 100%;
+    width: 100%;
+    padding: 4vw 6vw;
+    display: flex;
+    gap: 5%;
+    
+}
+
+#page6 #pg6-left{
+    height: 100%;
+    width: 50%;
+    /* background-color: lightpink; */
+}
+
+#pg6-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0% 30%;
+}
+
+
+#page6 #pg6-right{
+    height: 100%;
+    width: 45%;
+    /* background-color: lightpink; */
+}
+
+
+#pg6-right #part1{
+    height: 50%;
+    width: 100%;
+    margin-bottom: 5%;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#part1 h1{
+    font-size: 5vh;
+    font-weight: 700;
+    font-family: monument;
+}
+
+#part1 h2{
+    font-size: 3vh;
+    font-weight: 600;
+    color: #222;
+    width: 60%;
+}
+
+
+#part1 p{
+    font-size: 2.2vh;
+    font-weight: 500;
+}
+
+#pg6-right #part2{
+    height: 45%;
+    width: 100%;
+    /* background-color: seagreen; */
+    display: flex;
+    gap: 5%;
+}
+
+#part2 .img1{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+
+}
+
+#part2 .img2{
+    height: 100%;
+    width: 45%;
+    object-fit: cover;
+
+}
+
+
+/* ----------------------------------------------------------------Page 7 ---------------------------------------------------------------------- */
+
+
+#page7{
+    /* background-color: green; */
+    height: 100%;
+    width: 100%;
+    padding: 4vw 6vw;
+}
+
+#oneimg{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+#oneimg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+/* --------------------------------------------------------------Page 8 --------------------------------------------------------------------------- */
+
+
+
+#page8{
+    /* background-color: lightseagreen; */
+    height: 100%;
+    width: 100%;
+    padding: 2vw 0 2vw 0;
+    overflow: hidden;
+}
+
+#page8 #scroll-line{
+    height: 12%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 1vw 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+
+
+#scroll-line h1{
+    display: inline-block;
+    font-size: 6vh;
+    line-height: 6vh;
+    letter-spacing: 0.4vh;
+    font-family: 'monument';
+    font-weight: 100;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1.5px darkred;
+    margin-right: 16px;
+    animation-name: scroll-anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes scroll-anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+
+#page8 #pg8{
+    height: 88%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+}
+
+#pg8 #pg8-part1{
+    height: 100%;
+    width: 20%;
+    padding: 6vw 5vw 0vw 5vw;
+}
+
+#pg8-part1 h1{
+    font-size: 6vh;
+    line-height: 4vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'monument';
+    text-align:end;
+}
+
+
+#pg8 #pg8-part2{
+    height: 100%;
+    width: 40%;
+    padding: 6vw 3vw;
+}
+
+#pg8-part2 h3{
+    font-size: 3.5vh;
+    line-height: 4vh;
+    font-weight: 500;
+    text-align:justify;
+}
+
+#pg8-part2 .pg8-img1{
+    height: 70%;
+    width: 100%;
+    margin-top: 10%;
+}
+
+
+.pg8-img1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.pg8-img1:hover img{
+    transform: scale(1.2); /* Zoom image on hover */
+  }
+
+
+
+
+
+#pg8 #pg8-part3{
+    height: 100%;
+    width: 40%;
+    padding: 6vw 5vw 6vw 2vw;
+}
+
+
+#pg8-part3 h3{
+    font-size: 3.5vh;
+    line-height: 4vh;
+    font-weight: 500;
+    text-align:justify;
+}
+
+h3 span{
+    display: inline-block;
+    font-size: 2vh;
+    height: 4vh;
+    width: 5vh;
+    border-radius: 50%;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+
+
+#pg8-part3 .pg8-img2{
+    height: 70%;
+    width: 100%;
+    margin-top: 10%;
+}
+
+
+
+.pg8-img2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0% 30%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.pg8-img2:hover img{
+    transform: scale(1.2); /* Zoom image on hover */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------footer page --------------------------------------------------------------- */
+
+
+footer{
+    /* background-color: rgb(69, 32, 178); */
+    height: 45%;
+    width: 100%;
+    padding: 2vw 0vw;
+}
+
+#footer-nav{
+    height: 100%;
+    width: 100%;
+    /* background-color: #aa9e9e; */
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+}
+
+
+#footer-nav h1{
+    font-family: 'monument';
+    letter-spacing: -5px;
+    font-size: 3vw;
+    font-weight: 900;
+    height: 100%;
+    width: 26%;
+    padding-top: 1%;
+    /* background-color: #fb00d1; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#footer-nav h1::after{
+    content: '©️';
+    font-family: 'Acumin pro';
+    font-size: 1.2vw;
+    font-weight: 100;
+    position: absolute;
+    right: 4.9vw;
+    top: 1.2vw;
+}
+
+#footer-nav h1::before{
+    content: 'model management';
+    font-family: 'Acumin pro';
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 0px;
+    position: absolute;
+    top: 3.8vw;
+    left: 11.7vw;
+    color: #555;
+}
+
+
+#footer-nav a{
+    font-size: 1.5vw;
+    height: 100%;
+    width: 19%;
+    padding-top: 2%;
+    padding-left: 5%;
+    /* background-color: #002afb; */
+    text-decoration: none;
+    color: #000;
+    border-right: 2px solid #000;
+    transition: .3s ease-in-out;
+}
+
+
+#footer-nav a:nth-child(2){
+    width: 15%;
+    padding-left: 5%;
+}
+
+#footer-nav a:nth-child(2):hover{
+    font-size: 2vw;
+}
+#footer-nav a:nth-child(3):hover{
+    font-size: 2vw;
+}
+
+
+
+#detail{
+    height: 100%;
+    width: 40%;
+}
+
+#detail h3{
+    height: 35%;
+    width: 100%;
+    font-size: 1.5vw;
+    font-weight: 100;
+    padding-top: 5%;
+    padding-left: 10vh;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid #000;
+    transition: .3s ease-in-out;
+}
+
+#detail h3:hover{
+    font-size: 1.8vw;
+}
+
+#detail #contact{
+    height: 65%;
+    width: 100%;
+    padding: 2vw 4vw;
+}
+
+
+#contact .links{
+    display: flex;
+    gap: 20px;
+    font-size: 1.2vw;
+    margin-bottom: 2vw;
+    color: #555;
+}
+
+/* 
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|*/
+/* ============================================================Media Query ==================================================================== */
+
+
+@media (max-width:600px) {
+
+    body{
+        overflow-x: hidden;
+    }
+    
+    #nav{
+        height: 6vh;
+        margin-top: 20px;
+        padding: 0vw 6vw;
+    }
+
+    #nav h1{
+        letter-spacing: -1px;
+        font-size: 3vw;
+        font-weight: 900;
+        width: 50%;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    #nav h1::after{
+        display: none;
+    }
+
+    #nav h1::before{
+        display: none;
+    }
+
+    #nav a{
+        display: none;
+    }
+
+    #nav a:nth-last-child(1){
+        display: block ;
+        border-right: none;
+    }
+
+    #nav a i{
+        display: initial;
+        font-size: 5vw;
+        font-weight: 400;
+        position: absolute;
+        top: 4.5%;
+        right: 7%;
+
+    }
+
+    /* ------------------------------------------------------------------Center Page ------------------------------------------------------- */
+    #center{
+        height: 50%;
+        padding: 4vw 6vw;
+    }
+
+    #overlay{
+        height: fit-content;
+    }
+
+    #over1 h1{
+        font-size: 6vw;
+        font-weight: 500;
+    }
+
+    #over1 h2{
+        font-size: 3vw;
+        font-weight: 100;
+        border-right: 3.5px solid #fff ;
+    }
+
+    #over2{
+        padding: 2vw 0;
+    }
+
+    #over2 h4{
+        font-size: 2.8vw;
+        font-weight: 500;
+    }
+
+    #over2 img{
+        height: 6vw;
+    }
+
+    /*---------------------------------------------------------------Scroll Page---------------------------------------------------------------------------- */
+
+    #scroll{
+        height: 20vh;
+        width: 100%;
+        /* background-color: cyan; */
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    #container{
+        height: 100%;
+        width: 200%;
+        /* background-color:mediumpurple; */
+        display: inline-block;
+        padding: 1vw;
+        animation-name: anime;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    #container img{
+        height: 80%;
+        border-radius: 50%;
+        width: 15%;
+        margin: 1.5vw;
+        object-fit: cover;
+        object-position: top;
+        /* display: none; */
+    }
+
+    @keyframes anime{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+
+/* -------------------------------------------------------------Alphabet Page ---------------------------------------------------------------- */
+
+    #alphabet{
+        height: 10vw;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        padding: 0px 25px;
+    }
+
+    #alphabet h5{
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* transition: all ease 0.2s; */
+    }
+
+    #alphabet h5:hover{
+        text-decoration: underline;
+        font-size: 11.5px;
+    }
+
+    #alphabet h6{
+        height: 20px;
+        width: 200px;
+        font-style: italic;
+        font-size: 7.5px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #alphabet h6:hover{
+        border-radius: 50%;
+        border: 2px solid #000;
+    }
+
+    
+/* -------------------------------------------------------------Page 2 ---------------------------------------------------------------------------------- */
+
+
+    #page2{
+        height: 40%;
+        width: 100%;
+        /* background-color: #dadada; */
+        padding: 4vw 6vw;
+        padding-bottom: 0;
+        display: flex ;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    #pg2-left{
+        height: 100%;
+        width: 55%;
+        /* background-color: red; */
+    }
+
+    #pg2-left img{
+        height: 80%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #page2 h1{
+        font-family: 'monument';
+        font-size: 1.7vh;
+        font-weight: 700;
+        margin-top: 12.5px;
+        line-height: 2vh;
+    }
+
+    #pg2-right{
+        height: 100%;
+        width: 40%;
+        /* background-color: red; */
+        display: grid;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 60% 40%;
+    }
+
+
+    #pg2-right img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0 30%;
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+
+    #pg2-right h3{
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 15px 0px;
+        font-size: 1vh;
+        line-height: 1.3vh;
+        font-weight: 600;
+    }
+
+    #pg2-right p{
+        width: 100%;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding: 15px 0px;
+        font-size: .7vh;
+        line-height: 1vh;
+        font-weight: 500;
+        color: #222;
+    }
+
+
+    
+
+
+/* ---------------------------------------------------------page 3--------------------------------------------------------------------- */
+
+    #page3{
+        height: 30%;
+        width: 100%;
+        /* background-color: #c1c1c1; */
+        padding: 4vw 6vw;
+        /* padding-bottom: 0vw; */
+        display: flex;
+        gap: 5%;
+    }
+
+ 
+
+    #pg3-left h3{
+        font-size: .9vh;
+        line-height: 1.2vh;
+        font-weight: 600;
+    }
+
+
+    /* ---------------------------------------------------------page 4 --------------------------------------------------------------------------------- */
+
+    #page4{
+        /* background: green; */
+        height: 30%;
+        width: 100%;
+        padding: 4vw 6vw;
+    }
+
+
+
+
+/* ------------------------------------------------------------page 5 --------------------------------------------------------------------------- */
+
+    #page5{
+        /* background: salmon; */
+        height: 40%;
+        width: 100%;
+        padding: 4vw 6vw;
+
+    }
+
+    #page5>h1{
+        text-align: center;
+        font-family: 'monument';
+        text-transform: uppercase;
+        font-size: 3vh;
+        font-weight: 700;
+        margin-bottom: 5vh;
+    }
+
+
+    #page5 .elem{
+        height: 6.5vh;
+        width: 100%;
+        border-top: 2px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0vh 2vh;
+    }
+
+    #page5 .elem:nth-last-child(1) {
+        border-bottom: 2px solid #000;
+    }
+
+    .elem h4{
+        font-size: 1vh;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 6vh;
+        height: 3vh;
+    }
+
+    .elem .elem-part2{
+        width: 40%;
+    }
+
+    .elem-part2 h1{
+        font-size: 1.5vh;
+        font-weight: 500;
+    }
+
+    .elem-part2 h5{
+        font-size: 1vh;
+        font-weight: 600;
+        line-height: 2.4vh;
+        text-transform: uppercase;
+        font-family: 'Acumin Pro Wide';
+    }
+
+
+    .elem .elem-part1{
+        height: 100%;
+        width: 35%;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        position: relative;
+    }
+
+    .elem-part1 h1{
+        font-size: 1.5vh;
+
+        margin-top: 1.5vh;
+    }
+
+
+    .elem-part1 h5{
+        font-size: 1vh;
+        line-height: 2.4vh;
+
+    }
+
+
+
+
+
+/* -------------------------------------------------------------Page 6 ------------------------------------------------------------------------ */
+
+
+#page6{
+    /* background: teal; */
+    height: 40%;  
+}
+
+#page6 #pg6-left{
+    height: 100%;
+    width: 50%;
+    /* background-color: lightpink; */
+}
+
+
+#page6 #pg6-right{
+    width: 45%;
+}
+
+
+#pg6-right #part1{
+    height: 60%;
+    width: 100%;
+    margin-bottom: 0%;
+}
+
+#part1 h1{
+    font-size: 2vh;
+}
+
+#part1 h2{
+    font-size: 1vh;
+    color: #222;
+    width: 75%;
+}
+
+
+#part1 p{
+    font-size: 0.8vh;
+}
+
+#pg6-right #part2{
+    height: 40%;
+
+}
+
+
+
+
+/* ----------------------------------------------------------------Page 7 ---------------------------------------------------------------------- */
+
+
+#page7{
+    /* background-color: green; */
+    height: 30%;
+    width: 100%;
+    padding: 4vw 6vw;
+}
+
+
+
+/* --------------------------------------------------------------Page 8 --------------------------------------------------------------------------- */
+
+
+
+#page8{
+    /* background-color: lightseagreen; */
+    height: 30%;
+    width: 100%;
+    padding: 2vw 0 2vw 0;
+    overflow: hidden;
+}
+
+#page8 #scroll-line{
+    height: 14%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 1vw 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+
+
+#scroll-line h1{
+    display: inline-block;
+    font-size: 2vh;
+    line-height: 1vh;
+    letter-spacing: 0.4vh;
+    -webkit-text-stroke: 1px darkred;
+    margin-right: 16px;
+    animation-name: scroll-anime;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes scroll-anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+
+#page8 #pg8{
+    height: 88%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+}
+
+
+#pg8-part1 h1{
+    font-size: 1.5vh;
+    line-height: 2vh;
+}
+
+
+#pg8 #pg8-part2{
+    height: 100%;
+    width: 40%;
+    padding: 6vw 3vw;
+}
+
+#pg8-part2 h3{
+    font-size: 1.25vh;
+    line-height: 1.45vh;
+    font-weight: 500;
+    text-align:justify;
+}
+
+#pg8-part2 .pg8-img1{
+    height: 60%;
+    width: 100%;
+    margin-top: 10%;
+} 
+
+
+
+#pg8 #pg8-part3{
+    height: 100%;
+    width: 40%;
+    padding: 6vw 5vw 6vw 2vw;
+}
+
+
+#pg8-part3 h3{
+    font-size: 1.15vh;
+    line-height: 1.25vh;
+    font-weight: 500;
+    text-align:justify;
+}
+
+h3 span{
+    display: inline-block;
+    font-size: 1.2vh;
+    height: 2vh;
+    width: 2.5vh;
+}
+
+
+
+
+#pg8-part3 .pg8-img2{
+    height: 60%;
+    width: 100%;
+    margin-top: 10%;
+}
+
+/* ------------------------------------------------------------------------footer page --------------------------------------------------------------- */
+
+
+footer{
+    /* background-color: rgb(69, 32, 178); */
+    height: 17%;
+    width: 100%;
+    padding: 4vw 0vw;
+}
+
+#footer-nav{
+    height: 100%;
+    width: 100%;
+    /* background-color: #aa9e9e; */
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+}
+
+
+#footer-nav h1{
+    font-family: 'monument';
+    letter-spacing: -1px;
+    font-size: 3vw;
+    font-weight: 900;
+    height: 100%;
+    width: 26%;
+    padding-top: 1%;
+    /* background-color: #fb00d1; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#footer-nav h1::after{
+    display: none;
+    content: '©️';
+    font-family: 'Acumin pro';
+    font-size: 1.2vw;
+    font-weight: 100;
+    position: absolute;
+    right: 4.9vw;
+    top: 1.2vw;
+}
+
+#footer-nav h1::before{
+    display: none;
+    content: 'model management';
+    font-family: 'Acumin pro';
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 0px;
+    position: absolute;
+    top: 3.8vw;
+    left: 11.7vw;
+    color: #555;
+}
+
+
+#footer-nav a{
+    font-size: 1.8vw;
+    font-weight: 500;
+    height: 100%;
+    width: 19%;
+    padding-top: 2%;
+    padding-left: 5%;
+    /* background-color: #002afb; */
+    text-decoration: none;
+    color: #000;
+    border-right: 2px solid #000;
+    transition: .3s ease-in-out;
+}
+
+
+#footer-nav a:nth-child(2){
+    width: 15%;
+    padding-left: 5%;
+}
+
+#footer-nav a:nth-child(2):hover{
+    font-size: 2vw;
+}
+#footer-nav a:nth-child(3):hover{
+    font-size: 2vw;
+}
+
+
+
+#detail{
+    height: 100%;
+    width: 40%;
+}
+
+#detail h3{
+    height: 35%;
+    width: 100%;
+    font-size: 1.8vw;
+    font-weight: 500;
+    padding-top: 6%;
+    padding-left: 1vh;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid #000;
+    transition: .3s ease-in-out;
+}
+
+#detail h3:hover{
+    font-size: 1.8vw;
+}
+
+#detail #contact{
+    height: 65%;
+    width: 100%;
+    padding: 2vw 4vw;
+}
+
+
+#contact .links{
+    display: flex;
+    gap: 10px;
+    font-size: 2.2vw;
+    margin-bottom: 2vw;
+    color: #555;
+}
+
+#contact p{
+    font-size: 0.8vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
